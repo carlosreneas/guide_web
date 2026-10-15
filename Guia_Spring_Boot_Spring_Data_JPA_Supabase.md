@@ -88,39 +88,26 @@ Agregar Spring Web, Spring Data JPA, PostgreSQL Driver y Validation. El parent d
 
 Dependencias de Maven que deben aparecer en pom.xml:
 ```xml
-\<dependency\>
+<dependency\>
+<groupId\>org.springframework.boot\</groupId\>
+<artifactId\>spring-boot-starter-web\</artifactId\>
+</dependency\>
 
-\<groupId\>org.springframework.boot\</groupId\>
+<dependency\>
+<groupId\>org.springframework.boot\</groupId\>
+<artifactId\>spring-boot-starter-data-jpa\</artifactId\>
+</dependency\>
 
-\<artifactId\>spring-boot-starter-web\</artifactId\>
+<dependency\>
+<groupId\>org.springframework.boot\</groupId\>
+<artifactId\>spring-boot-starter-validation\</artifactId\>
+</dependency\>
 
-\</dependency\>
-
-\<dependency\>
-
-\<groupId\>org.springframework.boot\</groupId\>
-
-\<artifactId\>spring-boot-starter-data-jpa\</artifactId\>
-
-\</dependency\>
-
-\<dependency\>
-
-\<groupId\>org.springframework.boot\</groupId\>
-
-\<artifactId\>spring-boot-starter-validation\</artifactId\>
-
-\</dependency\>
-
-\<dependency\>
-
-\<groupId\>org.postgresql\</groupId\>
-
-\<artifactId\>postgresql\</artifactId\>
-
-\<scope\>runtime\</scope\>
-
-\</dependency\>
+<dependency\>
+<groupId\>org.postgresql\</groupId\>
+<artifactId\>postgresql\</artifactId\>
+<scope\>runtime\</scope\>
+</dependency\>
 ```
 
 # 5. Estructura del proyecto
