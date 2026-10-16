@@ -117,6 +117,34 @@ spring:
     table: flyway_schema_history
 ```
 
+Si vas a trabajar con .properties
+
+```properties
+spring.datasource.url=jdbc:postgresql://${SUPABASE_DB_HOST:db.xxxxxx.supabase.co}:5432/${SUPABASE_DB_NAME:postgres}?sslmode=require
+spring.datasource.username=${SUPABASE_DB_USER:postgres}
+spring.datasource.password=${SUPABASE_DB_PASSWORD:tu_password_aqui}
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+spring.datasource.hikari.maximum-pool-size=5
+spring.datasource.hikari.minimum-idle=2
+spring.datasource.hikari.idle-timeout=30000
+spring.datasource.hikari.max-lifetime=60000
+spring.datasource.hikari.connection-timeout=20000
+
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+
+spring.flyway.enabled=true
+spring.flyway.baseline-on-migrate=true
+spring.flyway.baseline-version=0
+spring.flyway.locations=classpath:db/migration
+spring.flyway.schemas=public
+spring.flyway.table=flyway_schema_history
+```
+
 ---
 
 ## 4. Versionado de Base de Datos con Flyway
